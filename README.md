@@ -81,4 +81,18 @@ Copy code
 - Feature selection based on activity metrics
 - ML model trained to compute an **AI Health Score**
 - Predictions integrated into Flask backend
+
 - Results visualized on the dashboard
+
+- ## 🚀 Live Demo
+
+🔗 **Deployed Application:**  
+## 🚀 Live Demo
+
+🔗 **Deployed Application:**  
+https://ai-powered-health-tracker-1.onrender.com/
+
+The application is deployed on Render using Flask and Gunicorn.
+
+
+The application is deployed on Render using Flask and Gunicorn.
