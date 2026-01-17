@@ -45,21 +45,23 @@ This project was developed as part of the **Microsoft Elevate – GitHub Copilot
 
 AI-Powered-Health-Tracker-Dashboard/
 │
-├── app.py
-├── model.py
-├── model.pkl
-├── dailyActivity_merged.csv
-├── requirements.txt
-├── README.md
+├── app.py # Flask application (routes & rendering)
+├── model.py # ML model training logic
+├── model.pkl # Trained ML model
+├── dailyActivity_merged.csv # Health activity dataset
+├── requirements.txt # Project dependencies
+├── README.md # Project documentation
 │
 ├── templates/
-│   └── dashboard.html
+│ └── dashboard.html # Frontend dashboard UI
 │
 └── static/
-    └── style.css
+└── style.css # Dashboard styling
 
+yaml
+Copy code
 
-
+---
 
 ## 📊 Dataset Used
 
@@ -79,5 +81,4 @@ AI-Powered-Health-Tracker-Dashboard/
 - Feature selection based on activity metrics
 - ML model trained to compute an **AI Health Score**
 - Predictions integrated into Flask backend
-
 - Results visualized on the dashboard

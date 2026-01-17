@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f8fafc;
+    margin: 0;
+    padding: 0;
+}
+
+/* PAGE TITLE */
+.page-title {
+    text-align: center;
+    margin: 25px 0 35px;
+}
+
+.page-title h1 {
+    font-size: 34px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #6366f1, #22c55e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* CARDS */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 0 40px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.card.highlight {
+    border: 2px solid #22c55e;
+}
+
+.circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 10px solid #22c55e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin: 10px auto;
+}
+
+.status {
+    text-align: center;
+    font-weight: bold;
+}
+
+.green { color: #16a34a; }
+.red { color: #dc2626; }
+
+/* SECTION TITLES */
+.section-title {
+    margin: 40px 40px 10px;
+    font-size: 22px;
+}
+
+/* CHART */
+.chart-wrapper {
+    height: 320px;
+    margin: 0 40px;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* INSIGHTS */
+.insights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    padding: 0 40px;
+}
+
+.insight {
+    padding: 15px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.green-bg { background: #dcfce7; }
+.yellow-bg { background: #fef9c3; }
+.blue-bg { background: #e0e7ff; }
+
+/* FOOTER STATS */
+.footer-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+    gap: 15px;
+    padding: 30px 40px;
+}
+
+.footer-stats div {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
