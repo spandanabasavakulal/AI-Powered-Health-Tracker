@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI-Powered Health Tracker Dashboard</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<!-- PAGE HEADING -->
+<div class="page-title">
+    <h1>AI-Powered Health Tracker Dashboard</h1>
+</div>
+
+<!-- METRIC CARDS -->
+<div class="card-container">
+
+    <div class="card highlight">
+        <h3>⭐ AI Health Score</h3>
+        <div class="circle">{{ data.health_score }} / 100</div>
+        <p class="status">Needs Improvement</p>
+    </div>
+
+    <div class="card">
+        <h3>⚡ Steps Today</h3>
+        <h2>{{ data.steps }}</h2>
+        <p class="green">▲ 12% vs last week</p>
+    </div>
+
+    <div class="card">
+        <h3>❤️ Heart Rate</h3>
+        <h2>{{ data.heart_rate }} bpm</h2>
+        <p class="red">▼ 3 bpm vs last week</p>
+    </div>
+
+    <div class="card">
+        <h3>🌙 Sleep Quality</h3>
+        <h2>{{ data.sleep }} hrs</h2>
+        <p class="green">▲ 8% vs last week</p>
+    </div>
+
+    <div class="card">
+        <h3>🔥 Calories Burned</h3>
+        <h2>{{ data.calories }}</h2>
+        <p class="green">▲ 5% vs last week</p>
+    </div>
+
+</div>
+
+<!-- WEEKLY ACTIVITY -->
+<h2 class="section-title">Weekly Activity Overview</h2>
+
+<div class="chart-wrapper">
+    <canvas id="activityChart"></canvas>
+</div>
+
+<!-- AI INSIGHTS -->
+<h2 class="section-title">✨ AI-Powered Insights</h2>
+
+<div class="insights">
+
+    <div class="insight green-bg">
+        ✔ Sleep Pattern Improving  
+        <span>Confidence: {{ data.confidence_sleep }}%</span>
+    </div>
+
+    <div class="insight yellow-bg">
+        ⚠ Hydration Below Target  
+        <span>Confidence: {{ data.confidence_hydration }}%</span>
+    </div>
+
+    <div class="insight blue-bg">
+        ⭐ Best Exercise Time  
+        <span>4–6 PM ({{ data.confidence_exercise }}%)</span>
+    </div>
+
+</div>
+
+<!-- FOOT STATS -->
+<div class="footer-stats">
+    <div>💧 1.8L Water</div>
+    <div>⚡ 52 min Active</div>
+    <div>❤️ 98% Oxygen</div>
+    <div>🔥 5 Day Streak</div>
+</div>
+
+<script>
+const ctx = document.getElementById('activityChart');
+
+new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
+        datasets: [
+            {
+                label: 'Steps',
+                data: [24000,11000,23000,16500,28500,10500,2500],
+                borderColor: '#6366f1',
+                tension: 0.4
+            },
+            {
+                label: 'Calories',
+                data: [4200,3100,4300,3900,4600,2800,1000],
+                borderColor: '#fb7185',
+                tension: 0.4
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false
+    }
+});
+</script>
+
+</body>
+</html>
